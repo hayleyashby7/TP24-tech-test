@@ -41,9 +41,11 @@ Write a basic set of HTTP APIs which follows best practices to provide the follo
 
 ### Tech Stack
 
-Server: Node.js Express server written in Typescript.
-Testing: Jest, with Supertest support for HTTP calls.
-Data Storage: sqlite3 and sequelize
+- Server: Node.js Express server written in Typescript.
+
+- Testing: Jest, with Supertest support for HTTP calls.
+
+- Data Storage: sqlite3 and sequelize
 
 ### Assumptions and decisions
 
