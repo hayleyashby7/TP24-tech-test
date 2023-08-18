@@ -4,9 +4,10 @@
 	"description": "TP24 Tech Test",
 	"main": "index.js",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --verbose",
 		"start": "ts-node src/server.ts",
-		"dev": "nodemon src/server.ts"
+		"dev": "nodemon src/server.ts",
+		"lint": "eslint src/**/*.ts --fix"
 	},
 	"keywords": [],
 	"author": "",
@@ -31,8 +32,11 @@
 		"typescript": "^5.1.6"
 	},
 	"dependencies": {
+		"@types/sqlite3": "^3.1.8",
 		"cors": "^2.8.5",
 		"dotenv": "^16.3.1",
-		"express": "^4.18.2"
+		"express": "^4.18.2",
+		"sequelize": "^6.32.1",
+		"sqlite3": "^5.1.6"
 	}
 }

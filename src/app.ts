@@ -2,6 +2,7 @@ import { config } from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
+import { router } from './routes/routes';
 
 // Load environment variables
 config({ path: '.env' });
@@ -26,5 +27,7 @@ if (process.env.NODE_ENV === 'development') {
 app.get('/', (req, res) => {
 	res.send('TP24 Tech Test API');
 });
+
+app.use('/api', router);
 
 export default app;
