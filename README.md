@@ -37,13 +37,15 @@ Write a basic set of HTTP APIs which follows best practices to provide the follo
 
 ### Time Taken
 
-5 hours split oover 2 short sessions - 1 hour longer than planned as I got a bit caught out by not being able to use sequelize-mock with typescript and had to rethink my testing plan.
+5 hours split over 2 short sessions - 1 hour longer than planned as I got a bit caught out by not being able to use sequelize-mock with typescript and had to rethink my testing plan.
 
 ### Tech Stack
 
-Server: Node.js Express server written in Typescript.
-Testing: Jest, with Supertest support for HTTP calls.
-Data Storage: sqlite3 and sequelize
+- Server: Node.js Express server written in Typescript.
+
+- Testing: Jest, with Supertest support for HTTP calls.
+
+- Data Storage: sqlite3 and sequelize
 
 ### Assumptions and decisions
 
