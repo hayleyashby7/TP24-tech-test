@@ -14,8 +14,9 @@ export const addReceivable = async (req: Request, res: Response, next: NextFunct
 			switch (err.message) {
 				case 'Empty request body':
 					return res.status(400).json({ message: 'No receivable data provided' });
-				case 'SequelizeUniqueConstraintError':
-					return res.status(409).json({ message: 'Receivable reference already exists' });
+				case 'Validation error':
+					if (error.name === 'SequelizeUniqueConstraintError') return res.status(409).json({ message: 'Receivable reference already exists' });
+					else return res.status(400).json({ message: 'Invalid receivable data provided' });
 				default:
 					return res.status(500).json({ message: 'An unknown error occurred' });
 			}

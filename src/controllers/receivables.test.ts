@@ -129,7 +129,9 @@ describe('POST /receivables', () => {
 				debtorCountryCode: 'GB',
 				debtorRegistrationNumber: '9876654456',
 			};
-			ReceivablesService.addReceivable = jest.fn().mockRejectedValue(new Error('SequelizeUniqueConstraintError'));
+			const error = new Error('Validation error');
+			error.name = 'SequelizeUniqueConstraintError';
+			ReceivablesService.addReceivable = jest.fn().mockRejectedValue(error);
 
 			// Act
 			const response = await request(app).post('/api/receivables').send(requestBody);
